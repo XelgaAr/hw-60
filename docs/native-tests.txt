@@ -1,0 +1,410 @@
+
+> express-hw01-tests@1.0.0 test:native
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: static HTTP: /repository-check/index.html
+ok 1 - static HTTP: /repository-check/index.html
+  ---
+  duration_ms: 20.800785
+  type: 'test'
+  ...
+# Subtest: static HTTP: /repository-check/styles.css
+ok 2 - static HTTP: /repository-check/styles.css
+  ---
+  duration_ms: 3.400523
+  type: 'test'
+  ...
+# Subtest: static HTTP: /repository-check/base.css
+ok 3 - static HTTP: /repository-check/base.css
+  ---
+  duration_ms: 2.626767
+  type: 'test'
+  ...
+# Subtest: static HTTP: /repository-check/app.js
+ok 4 - static HTTP: /repository-check/app.js
+  ---
+  duration_ms: 2.868932
+  type: 'test'
+  ...
+# Subtest: static HTTP: /repository-check/favicon.svg
+ok 5 - static HTTP: /repository-check/favicon.svg
+  ---
+  duration_ms: 2.452465
+  type: 'test'
+  ...
+# Subtest: static HTTP: /repository-check/config.js
+ok 6 - static HTTP: /repository-check/config.js
+  ---
+  duration_ms: 2.90767
+  type: 'test'
+  ...
+# Subtest: static HTTP: /repository-check/domain/resources.mjs
+ok 7 - static HTTP: /repository-check/domain/resources.mjs
+  ---
+  duration_ms: 2.098732
+  type: 'test'
+  ...
+# Subtest: static HTTP: /repository-check/domain/seed.mjs
+ok 8 - static HTTP: /repository-check/domain/seed.mjs
+  ---
+  duration_ms: 4.028068
+  type: 'test'
+  ...
+# Subtest: static HTTP: index and HEAD response
+ok 9 - static HTTP: index and HEAD response
+  ---
+  duration_ms: 7.740461
+  type: 'test'
+  ...
+# Subtest: static HTTP: unknown paths and paths outside repository are 404
+ok 10 - static HTTP: unknown paths and paths outside repository are 404
+  ---
+  duration_ms: 3.284217
+  type: 'test'
+  ...
+# Subtest: static HTTP: unsafe path cannot escape the public root
+ok 11 - static HTTP: unsafe path cannot escape the public root
+  ---
+  duration_ms: 0.842239
+  type: 'test'
+  ...
+# Subtest: static HTTP: invalid percent encoding is 400
+ok 12 - static HTTP: invalid percent encoding is 400
+  ---
+  duration_ms: 0.728488
+  type: 'test'
+  ...
+# Subtest: static HTTP: POST is not exposed
+ok 13 - static HTTP: POST is not exposed
+  ---
+  duration_ms: 0.839765
+  type: 'test'
+  ...
+# Subtest: users: seeded Map returns independent records
+ok 14 - users: seeded Map returns independent records
+  ---
+  duration_ms: 1.524177
+  type: 'test'
+  ...
+# Subtest: users: complete CRUD lifecycle
+ok 15 - users: complete CRUD lifecycle
+  ---
+  duration_ms: 0.805604
+  type: 'test'
+  ...
+# Subtest: users: trims whitespace and accepts Unicode
+ok 16 - users: trims whitespace and accepts Unicode
+  ---
+  duration_ms: 0.154213
+  type: 'test'
+  ...
+# Subtest: users: rejects undefined for create and update
+ok 17 - users: rejects undefined for create and update
+  ---
+  duration_ms: 0.21865
+  type: 'test'
+  ...
+# Subtest: users: rejects null for create and update
+ok 18 - users: rejects null for create and update
+  ---
+  duration_ms: 0.167503
+  type: 'test'
+  ...
+# Subtest: users: rejects "" for create and update
+ok 19 - users: rejects "" for create and update
+  ---
+  duration_ms: 0.09959
+  type: 'test'
+  ...
+# Subtest: users: rejects "   " for create and update
+ok 20 - users: rejects "   " for create and update
+  ---
+  duration_ms: 0.175254
+  type: 'test'
+  ...
+# Subtest: users: rejects "\\t\\r\\n" for create and update
+ok 21 - users: rejects "\\t\\r\\n" for create and update
+  ---
+  duration_ms: 0.101974
+  type: 'test'
+  ...
+# Subtest: users: rejects 0 for create and update
+ok 22 - users: rejects 0 for create and update
+  ---
+  duration_ms: 0.360924
+  type: 'test'
+  ...
+# Subtest: users: rejects false for create and update
+ok 23 - users: rejects false for create and update
+  ---
+  duration_ms: 0.33854
+  type: 'test'
+  ...
+# Subtest: users: rejects [] for create and update
+ok 24 - users: rejects [] for create and update
+  ---
+  duration_ms: 0.164107
+  type: 'test'
+  ...
+# Subtest: users: rejects {} for create and update
+ok 25 - users: rejects {} for create and update
+  ---
+  duration_ms: 0.093521
+  type: 'test'
+  ...
+# Subtest: users: rejects ["text"] for create and update
+ok 26 - users: rejects ["text"] for create and update
+  ---
+  duration_ms: 0.094413
+  type: 'test'
+  ...
+# Subtest: users: rejects invalid body undefined
+ok 27 - users: rejects invalid body undefined
+  ---
+  duration_ms: 0.124388
+  type: 'test'
+  ...
+# Subtest: users: rejects invalid body null
+ok 28 - users: rejects invalid body null
+  ---
+  duration_ms: 0.049795
+  type: 'test'
+  ...
+# Subtest: users: rejects invalid body {}
+ok 29 - users: rejects invalid body {}
+  ---
+  duration_ms: 0.04653
+  type: 'test'
+  ...
+# Subtest: users: rejects invalid body 5
+ok 30 - users: rejects invalid body 5
+  ---
+  duration_ms: 0.043205
+  type: 'test'
+  ...
+# Subtest: users: rejects invalid body []
+ok 31 - users: rejects invalid body []
+  ---
+  duration_ms: 0.043095
+  type: 'test'
+  ...
+# Subtest: users: missing IDs return 404
+ok 32 - users: missing IDs return 404
+  ---
+  duration_ms: 0.116476
+  type: 'test'
+  ...
+# Subtest: users: independent collections and returned objects
+ok 33 - users: independent collections and returned objects
+  ---
+  duration_ms: 0.101773
+  type: 'test'
+  ...
+# Subtest: users: IDs remain unique within the same millisecond
+ok 34 - users: IDs remain unique within the same millisecond
+  ---
+  duration_ms: 10.245685
+  type: 'test'
+  ...
+# Subtest: users: unexpected ID failure does not mutate the Map
+ok 35 - users: unexpected ID failure does not mutate the Map
+  ---
+  duration_ms: 0.206391
+  type: 'test'
+  ...
+# Subtest: articles: seeded Map returns independent records
+ok 36 - articles: seeded Map returns independent records
+  ---
+  duration_ms: 0.074262
+  type: 'test'
+  ...
+# Subtest: articles: complete CRUD lifecycle
+ok 37 - articles: complete CRUD lifecycle
+  ---
+  duration_ms: 0.092149
+  type: 'test'
+  ...
+# Subtest: articles: trims whitespace and accepts Unicode
+ok 38 - articles: trims whitespace and accepts Unicode
+  ---
+  duration_ms: 0.044026
+  type: 'test'
+  ...
+# Subtest: articles: rejects undefined for create and update
+ok 39 - articles: rejects undefined for create and update
+  ---
+  duration_ms: 0.060822
+  type: 'test'
+  ...
+# Subtest: articles: rejects null for create and update
+ok 40 - articles: rejects null for create and update
+  ---
+  duration_ms: 0.054773
+  type: 'test'
+  ...
+# Subtest: articles: rejects "" for create and update
+ok 41 - articles: rejects "" for create and update
+  ---
+  duration_ms: 0.055433
+  type: 'test'
+  ...
+# Subtest: articles: rejects "   " for create and update
+ok 42 - articles: rejects "   " for create and update
+  ---
+  duration_ms: 0.185609
+  type: 'test'
+  ...
+# Subtest: articles: rejects "\\t\\r\\n" for create and update
+ok 43 - articles: rejects "\\t\\r\\n" for create and update
+  ---
+  duration_ms: 0.088773
+  type: 'test'
+  ...
+# Subtest: articles: rejects 0 for create and update
+ok 44 - articles: rejects 0 for create and update
+  ---
+  duration_ms: 0.089214
+  type: 'test'
+  ...
+# Subtest: articles: rejects false for create and update
+ok 45 - articles: rejects false for create and update
+  ---
+  duration_ms: 0.060812
+  type: 'test'
+  ...
+# Subtest: articles: rejects [] for create and update
+ok 46 - articles: rejects [] for create and update
+  ---
+  duration_ms: 0.049585
+  type: 'test'
+  ...
+# Subtest: articles: rejects {} for create and update
+ok 47 - articles: rejects {} for create and update
+  ---
+  duration_ms: 0.048073
+  type: 'test'
+  ...
+# Subtest: articles: rejects ["text"] for create and update
+ok 48 - articles: rejects ["text"] for create and update
+  ---
+  duration_ms: 0.130938
+  type: 'test'
+  ...
+# Subtest: articles: rejects invalid body undefined
+ok 49 - articles: rejects invalid body undefined
+  ---
+  duration_ms: 0.042274
+  type: 'test'
+  ...
+# Subtest: articles: rejects invalid body null
+ok 50 - articles: rejects invalid body null
+  ---
+  duration_ms: 0.035253
+  type: 'test'
+  ...
+# Subtest: articles: rejects invalid body {}
+ok 51 - articles: rejects invalid body {}
+  ---
+  duration_ms: 0.082524
+  type: 'test'
+  ...
+# Subtest: articles: rejects invalid body 5
+ok 52 - articles: rejects invalid body 5
+  ---
+  duration_ms: 0.048333
+  type: 'test'
+  ...
+# Subtest: articles: rejects invalid body []
+ok 53 - articles: rejects invalid body []
+  ---
+  duration_ms: 0.040651
+  type: 'test'
+  ...
+# Subtest: articles: missing IDs return 404
+ok 54 - articles: missing IDs return 404
+  ---
+  duration_ms: 0.050566
+  type: 'test'
+  ...
+# Subtest: articles: independent collections and returned objects
+ok 55 - articles: independent collections and returned objects
+  ---
+  duration_ms: 0.050686
+  type: 'test'
+  ...
+# Subtest: articles: IDs remain unique within the same millisecond
+ok 56 - articles: IDs remain unique within the same millisecond
+  ---
+  duration_ms: 8.023016
+  type: 'test'
+  ...
+# Subtest: articles: unexpected ID failure does not mutate the Map
+ok 57 - articles: unexpected ID failure does not mutate the Map
+  ---
+  duration_ms: 0.108284
+  type: 'test'
+  ...
+# Subtest: controllers use 201 + Location, 200, and empty 204
+ok 58 - controllers use 201 + Location, 200, and empty 204
+  ---
+  duration_ms: 0.315565
+  type: 'test'
+  ...
+# Subtest: unknown route handler returns a text 404
+ok 59 - unknown route handler returns a text 404
+  ---
+  duration_ms: 0.135354
+  type: 'test'
+  ...
+# Subtest: error middleware: 400
+ok 60 - error middleware: 400
+  ---
+  duration_ms: 0.154092
+  type: 'test'
+  ...
+# Subtest: error middleware: 404
+ok 61 - error middleware: 404
+  ---
+  duration_ms: 0.074022
+  type: 'test'
+  ...
+# Subtest: error middleware: 413
+ok 62 - error middleware: 413
+  ---
+  duration_ms: 0.063987
+  type: 'test'
+  ...
+# Subtest: error middleware: 415
+ok 63 - error middleware: 415
+  ---
+  duration_ms: 0.060241
+  type: 'test'
+  ...
+# Subtest: error middleware: 500
+ok 64 - error middleware: 500
+  ---
+  duration_ms: 0.158619
+  type: 'test'
+  ...
+# Subtest: error middleware: 418
+ok 65 - error middleware: 418
+  ---
+  duration_ms: 0.116365
+  type: 'test'
+  ...
+# Subtest: error middleware delegates after headers are sent
+ok 66 - error middleware delegates after headers are sent
+  ---
+  duration_ms: 0.101362
+  type: 'test'
+  ...
+1..66
+# tests 66
+# suites 0
+# pass 66
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 176.984257

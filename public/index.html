@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172c47">
+  <meta name="description" content="Routebook — интерактивная рабочая область REST API. Users, articles, CRUD, Express.js.">
+  <title>Routebook · REST API workspace</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#workspace">К рабочей области</a>
+  <header class="topbar"><a class="brand" href="./"><span class="mark">r/</span>routebook<span class="brand-note">API workspace</span></a><span class="badge" id="mode"><i></i> Загрузка…</span></header>
+  <div class="shell">
+    <aside class="sidebar"><span class="eyebrow">WORKSPACE / 060</span><h2>Ресурсы</h2><nav aria-label="Коллекции"><button type="button" data-resource="users" class="nav-item active"><span class="nav-icon">U</span>Пользователи<span id="nav-users">3</span></button><button type="button" data-resource="articles" class="nav-item"><span class="nav-icon">A</span>Статьи<span id="nav-articles">3</span></button></nav><div class="sidebar-note"><span class="tiny">СТЕК ПРОЕКТА</span><p>Express 5<br>JavaScript / ESM<br>Map collections</p><span class="small-rule"></span><p>Ясные маршруты.<br>Предсказуемые ответы.</p></div></aside>
+    <main id="workspace">
+      <section class="intro"><p class="eyebrow">REST API / RESOURCE EXPLORER</p><div class="title-row"><div><h1>Данные. Действия. Ответы.</h1><p class="lead">Создавайте, изменяйте и проверяйте ресурсы в одной рабочей области.</p></div><span class="version">v1.0</span></div><div class="mode-note" id="mode-note">Инициализация рабочей области…</div></section>
+      <section class="metrics" aria-label="Статистика"><div><span>Пользователи</span><strong id="users-count">—</strong><small>коллекция /users</small></div><div><span>Статьи</span><strong id="articles-count">—</strong><small>коллекция /articles</small></div><div><span>HTTP-методы</span><strong>04</strong><small>GET · POST · PUT · DELETE</small></div></section>
+      <div class="work-grid">
+        <section class="panel collection"><div class="panel-head"><div><span class="tiny">COLLECTION</span><h2 id="collection-title">Пользователи</h2></div><button class="text-button" id="refresh" type="button">Обновить ↻</button></div><label class="search-label"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="Поиск по имени или ID" aria-label="Поиск в коллекции"></label><div class="table-wrap"><table><thead><tr><th id="field-heading">Имя</th><th class="id-heading">ID</th><th class="actions-heading">Действия</th></tr></thead><tbody id="rows"></tbody></table><p class="empty-table" id="empty" hidden>Ничего не найдено. Измените поиск или добавьте запись.</p></div><div class="table-footer"><span id="rows-count">0 записей</span><code id="endpoint">GET /users</code></div></section>
+        <section class="panel composer"><div class="panel-head"><div><span class="tiny" id="form-method">POST /users</span><h2 id="form-title">Новый пользователь</h2></div><span class="plus" aria-hidden="true">＋</span></div><form id="resource-form"><label for="value" id="value-label">Имя</label><input id="value" name="value" placeholder="Например, Alex Morgan" required autocomplete="off"><p class="hint">Обязательное поле. Строка не может состоять только из пробелов.</p><button class="button primary full" id="save" type="submit">Создать пользователя →</button><button class="text-button" id="cancel-edit" type="button" hidden>Отменить редактирование</button></form><p class="status" id="status" role="status" aria-live="polite">Готово к работе.</p><div class="contract"><span class="tiny">ФОРМАТ РЕСУРСА</span><pre id="schema">{ "id": "…", "name": "…" }</pre><p>201 — создано · 200 — обновлено<br>204 — удалено · 400/404 — ошибка</p></div></section>
+      </div>
+      <section class="panel console"><div class="panel-head"><div><span class="tiny">REQUEST INSPECTOR</span><h2>Последний ответ</h2></div><span id="response-code" class="code-badge">READY</span></div><div class="console-meta"><code id="request-label">GET /users</code><span id="response-meta">Выполните действие, чтобы увидеть результат</span></div><pre id="response" aria-label="Ответ ресурса">{}</pre><div class="probe-bar"><span>Проверить контракт:</span><button type="button" data-probe="root">GET /</button><button type="button" data-probe="invalid">400 · пустое поле</button><button type="button" data-probe="missing">404 · нет ресурса</button></div></section>
+      <div class="bottom-row"><details><summary>Как запустить настоящий API</summary><pre>npm install
+npm start
+http://localhost:3000/demo/</pre><p>Map хранит данные в памяти процесса. После перезапуска сервера восстанавливаются начальные записи.</p></details><button type="button" id="reset" class="text-button">Сбросить локальное демо ↺</button></div>
+      <footer><span>ROUTEBOOK / HOMEWORK 60</span><span>Users · Articles · REST</span></footer>
+    </main>
+  </div>
+  <dialog id="confirm"><form method="dialog"><span class="eyebrow">DELETE RESOURCE</span><h2>Удалить запись?</h2><p id="delete-name"></p><p class="hint">Это действие нельзя отменить.</p><div class="dialog-actions"><button class="button secondary" value="cancel">Отмена</button><button class="button danger" id="delete-confirm" value="delete">Удалить</button></div></form></dialog>
+</body>
+</html>

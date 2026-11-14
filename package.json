@@ -1,0 +1,37 @@
+{
+  "name": "express-hw01-tests",
+  "version": "1.0.0",
+  "main": "src/server.mjs",
+  "license": "MIT",
+  "devDependencies": {
+    "vitest": "3.2.7",
+    "playwright": "1.65.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@vitest/coverage-v8": "3.2.7",
+    "supertest": "^7.1.0"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.mjs",
+    "dev": "node --watch --env-file-if-exists=.env src/server.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:native": "node --test tests/*.test.mjs",
+    "test:browser": "node scripts/browser-tests.mjs",
+    "test:report": "node scripts/test-report.mjs",
+    "lint": "node scripts/check.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs",
+    "check": "npm run lint && npm run test:native && npm test && npm run test:http && npm run build",
+    "test:http": "node --test tests/http/*.test.mjs",
+    "test:coverage": "vitest run --coverage",
+    "demo": "npm run build && npm run preview"
+  },
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

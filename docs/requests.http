@@ -1,0 +1,57 @@
+@baseUrl = http://localhost:3000
+@userId = user-1
+@articleId = article-1
+
+### Root
+GET {{baseUrl}}/
+
+### List users
+GET {{baseUrl}}/users
+
+### Create user
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{"name":"New user"}
+
+### Read user
+GET {{baseUrl}}/users/{{userId}}
+
+### Update user
+PUT {{baseUrl}}/users/{{userId}}
+Content-Type: application/json
+
+{"name":"Updated user"}
+
+### Delete user
+DELETE {{baseUrl}}/users/{{userId}}
+
+### List articles
+GET {{baseUrl}}/articles
+
+### Create article
+POST {{baseUrl}}/articles
+Content-Type: application/json
+
+{"title":"New article"}
+
+### Read article
+GET {{baseUrl}}/articles/{{articleId}}
+
+### Update article
+PUT {{baseUrl}}/articles/{{articleId}}
+Content-Type: application/json
+
+{"title":"Updated article"}
+
+### Delete article
+DELETE {{baseUrl}}/articles/{{articleId}}
+
+### Invalid body
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{"name":"   "}
+
+### Missing route
+GET {{baseUrl}}/unknown
